@@ -187,5 +187,31 @@ endmodule
 - When reset = 0, output q is always 1.
 
  ![Alt txt](lab5.png)
- 
+
+ # Lab 6
+
+This lab demonstrates a D flip-flop that always outputs a constant value of `1`, regardless of the clock or reset signals.
+
+---
+
+## Verilog Code
+
+```verilog
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+**Explanation:**
+
+- D flip-flop behavior:
+
+- Output q is always 1 regardless of the clock or reset inputs.
+ ![Alt txt](lab6.png)
+
 
