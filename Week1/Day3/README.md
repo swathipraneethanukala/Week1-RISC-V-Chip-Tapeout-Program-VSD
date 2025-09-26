@@ -66,8 +66,7 @@ Retiming is an optimization technique that improves **circuit performance** by r
 
 ---
 
-# Labs on Optimization
-
+# Optimization Lab Exercises
 This repository contains a series of Verilog labs demonstrating logic optimization and synthesis techniques.
 
 ---
@@ -93,4 +92,100 @@ opt_clean -purge
 ```
 
    ![Alt txt](lab1.png)
+
+# Lab 2
+
+This lab demonstrates a simple 2-to-1 multiplexer using Verilog.
+
+---
+
+## Verilog Code
+
+```verilog
+module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+```
+**Explanation:**
+
+- Implements a 2-to-1 multiplexer:
+- If a = 1, output y is 1.
+- If a = 0, output y takes the value of b.
+   ![Alt txt](lab2.png)
+
+  # Lab 3
+
+This lab demonstrates a 2-to-1 multiplexer implemented in Verilog.
+
+---
+
+## Verilog Code
+
+```verilog
+module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+```
+**Explanation:**
+- Functions as a 2-to-1 multiplexer:
+- If a = 1, output y is 1.
+- If a = 0, output y takes the value of b.
+   ![Alt txt](lab3.png)
+
+  # Lab 4
+
+This lab demonstrates the simplification of nested ternary logic in Verilog.
+
+---
+
+## Verilog Code
+
+```verilog
+module opt_check4 (input a , input b , input c , output y);
+ assign y = a?(b?(a & c ):c):(!c);
+ endmodule
+```
+**Explanation:**
+
+- Three-input logic module (a, b, c) with output y.
+
+- Nested ternary behavior:
+
+- If a = 1, y = c.
+
+- If a = 0, y = !c.
+
+- Simplified form: y = a ? c : !c
+  
+ ![Alt txt](lab4.png)
+
+# Lab 5
+
+This lab demonstrates a D flip-flop that loads a constant value when not in reset.
+
+---
+
+## Verilog Code
+
+```verilog
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+**Explanation:**
+
+- D flip-flop with asynchronous reset:
+
+- When reset = 1, output q is 0.
+
+- When reset = 0, output q is always 1.
+
+ ![Alt txt](lab5.png)
+ 
 
