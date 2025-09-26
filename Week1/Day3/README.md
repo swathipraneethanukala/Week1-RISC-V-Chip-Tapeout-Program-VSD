@@ -91,4 +91,6 @@ Add the following between abc -liberty and synth -top during Yosys synthesis:
 ```verilog
 opt_clean -purge
 ```
----
+
+   ![Alt txt](day3-lab1.png)
+
