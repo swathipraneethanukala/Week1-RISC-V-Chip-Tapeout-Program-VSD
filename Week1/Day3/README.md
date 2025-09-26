@@ -92,5 +92,5 @@ Add the following between abc -liberty and synth -top during Yosys synthesis:
 opt_clean -purge
 ```
 
-   ![Alt txt](day3-lab1.png)
+   ![Alt txt](lab1.png)
 
